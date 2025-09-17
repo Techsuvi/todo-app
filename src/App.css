@@ -1,0 +1,213 @@
+@import "tailwindcss";
+
+.MuiListItem-root.priority-high {
+  border-left: 5px solid #d32f2f; /* Red for High */
+}
+
+.MuiListItem-root.priority-medium {
+  border-left: 5px solid #fbc02d; /* Amber/Yellow for Medium */
+}
+
+.MuiListItem-root.priority-low {
+  border-left: 5px solid #43a047; /* Green for Low */
+}
+
+/* Glassmorphism Effect */
+.glass-card,
+.MuiDialog-paper {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Make dialog parts translucent too */
+.MuiDialogTitle-root.glass-effect,
+.MuiDialogContent-root.glass-effect,
+.MuiDialogActions-root.glass-effect {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Capsule-Shaped Priority Tags */
+.pill-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: white;
+  margin-left: 8px;
+  text-transform: uppercase;
+}
+
+.priority-high {
+  background-color: #f44336; /* Red */
+}
+
+.priority-medium {
+  background-color: #ffc107; /* Yellow */
+}
+
+.priority-low {
+  background-color: #4caf50; /* Green */
+}
+
+.recurring-tag {
+  background-color: #607d8b; /* Grey/Blue for recurring */
+}
+
+
+
+
+
+/* App.css */
+
+/* Light mode styles (default) */
+body {
+  background-color: #f0f2f5;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Specific overrides for dark mode components */
+.dark-mode .glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  color: #e0e0e0;
+}
+
+.dark-mode .MuiTypography-root,
+.dark-mode .MuiSvgIcon-root {
+  color: #e0e0e0;
+}
+
+.dark-mode .MuiCard-root,
+.dark-mode .MuiPaper-root {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.dark-mode .MuiInputBase-root,
+.dark-mode .MuiInputLabel-root {
+  color: #e0e0e0;
+}
+
+.dark-mode .MuiInputBase-input {
+  color: #fff;
+}
+
+.dark-mode .MuiDivider-root {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .MuiPaper-root.MuiPopover-paper {
+  background-color: #1e1e1e;
+}
+
+.madhubani-border {
+  border: 20px solid transparent;
+  border-image: url('https://i.pinimg.com/1200x/63/6e/f3/636ef3bcabe1ec012be0d49e7033c593.jpg') 30 round;
+}
+
+
+/* AI PAGE STYLE .... */
+
+
+/* Smooth fade-in for chat messages */
+.fade-in {
+  animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Typing dots animation */
+/* .typing-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.typing-dots span {
+  width: 6px;
+  height: 6px;
+  background: #2575fc;
+  border-radius: 50%;
+  display: inline-block;
+  animation: bounce 1s infinite;
+}
+
+.typing-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.typing-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0.6);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+} */
+
+.typing-dots {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.typing-dots span {
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: #999;
+  border-radius: 50%;
+  animation: bounce 1.4s infinite ease-in-out;
+}
+
+.typing-dots span:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-dots span:nth-of-type(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+}
+

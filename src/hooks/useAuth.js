@@ -1,0 +1,13 @@
+// src/hooks/useAuth.js
+import { useEffect, useState } from "react";
+
+export default function useAuth() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    setIsLoggedIn(!!token); // true if token exists
+  }, []);
+
+  return isLoggedIn;
+}
