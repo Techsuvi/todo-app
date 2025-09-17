@@ -235,9 +235,9 @@ const Login = () => {
               color="primary"
               fullWidth
               sx={{ mt: 1, textTransform: "none" }}
-              onClick={() => navigate("/forgot-password")}
+              onClick={() => navigate("/signup")}
             >
-              Forgot Password?
+               Signup
             </Button>
           </Box>
         </motion.div>
